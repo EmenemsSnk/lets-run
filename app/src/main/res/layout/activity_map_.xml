@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Map_Activity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:name="com.google.android.gms.maps.MapFragment" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dostawca"
+        android:id="@+id/provider"
+        android:layout_below="@+id/map"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Results"
+        android:id="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/provider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/speed"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:text="Speed: " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/distance"
+        android:layout_below="@+id/speed"
+        android:layout_alignParentStart="true"
+        android:text="Distance: " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView4"
+        android:text="Średnia prędkość:"
+        android:layout_below="@+id/distance"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/startB"
+            android:onClick="startRun"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:id="@+id/PauseB"
+            android:onClick="pauseRun"
+            android:layout_alignTop="@+id/startB"
+            android:layout_toEndOf="@+id/startB"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/StopB"
+            android:layout_alignTop="@+id/PauseB"
+            android:layout_toEndOf="@+id/PauseB"
+            android:onClick="stopRun"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/time"
+        android:text="Time:"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

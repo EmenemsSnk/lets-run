@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAccelerometer"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/points"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/accelerometer_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_below="@+id/points"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/accelerometer_query"
+        android:layout_centerHorizontal="true"></LinearLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:id="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="restart"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView android:src="@drawable/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dip"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nick"
+        android:text="login"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:text="password"
+        android:inputType="textPassword"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button3"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+
+
+        </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saveMoves"
+        android:id="@+id/button1"
+        android:clickable="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="goCalendar"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button7"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
